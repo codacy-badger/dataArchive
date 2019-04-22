@@ -25,5 +25,7 @@ git push
 :: 
 for /f %%i in ('git rev-parse HEAD') do set curr_commit=%%i
 
-echo current commit: "%curr_commit%"
+echo current commit: "%curr_commit:~1,6%"
 echo commit message: %1
+
+
